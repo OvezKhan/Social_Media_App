@@ -29,11 +29,6 @@ const user = require("./routes/user");
 app.use("/api/v1", post);
 app.use("/api/v1", user);
 
-// Serve Frontend (for production)
-app.use(express.static(path.join(__dirname, "../frontend/dist")));
 
-app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "../frontend/dist", "index.html"));
-});
 
 module.exports = app;
