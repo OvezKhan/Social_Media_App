@@ -69,13 +69,13 @@ exports.login = async (req, res) => {
                const options = {
   expires: new Date(Date.now() + 90 * 24 * 60 * 60 * 1000), // 90 days
   httpOnly: true,
-  sameSite: "Lax", // or "None" if cross-site
-  secure: process.env.NODE_ENV === "production",
+  sameSite: "None", // or "None" if cross-site
+  secure: true,
   path: "/"
 };
 
 
-                res.status(200).cookie("token", token , options).json({ success : true , user , token })
+                res.status(200).cookie("token", token , options).setHeader("Access-Control-Allow-Credentials", "true").json({ success : true , user , token })
                 // res.status(200).json({ success : true , user , token })
 
     } catch (error) {
