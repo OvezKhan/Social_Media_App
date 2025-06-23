@@ -1,0 +1,93 @@
+.login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: linear-gradient(to right, #fff5bc, #cec1ff);
+  padding: 2vmax;
+  box-sizing: border-box;
+}
+.formField {
+  width: 80%;
+  margin: 1.5vmax 0;
+  position: relative;
+}
+
+.registerInputs {
+  width: 100%;
+  padding: 1vmax 2vmax;
+  border-radius: 40px;
+  border: 1px solid #ccc;
+  font: 100 1.2rem "Roboto", sans-serif;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.passwordField input {
+  padding-right: 3rem; /* for eye icon */
+}
+
+.eyeIcon {
+  position: absolute;
+  right: 1.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  font-size: 1.2rem;
+}
+
+
+/* .passwordField {
+  position: relative;
+  width: 90%;
+  margin-left: 0rem;
+} */
+
+.loginForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1vmax;
+  padding: 2vmax;
+  border: 1px solid #ccc;
+  border-radius: 30px;
+  height: 100%;
+  box-sizing: border-box;
+  width: 50%;
+  background-color: #fff;
+}
+
+.loginForm > input {
+  padding: 1vmax 2vmax;
+  width: 80%;
+  border-radius: 40px;
+  margin: 2vmax;
+  font: 100 1.2rem "Roboto", sans-serif;
+  outline: none;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+.loginForm > a {
+  text-decoration: none;
+  align-self: flex-end;
+  color: rgba(0, 0, 0, 0.342);
+  margin: 2vmax;
+}
+
+@media screen and (max-width: 600px) {
+  .loginForm {
+    width: 100%;
+  }
+
+  .loginForm > input {
+    /* padding: 4vw 8vw; */
+    margin: 2vmax;
+    font: 100 1.2rem "Roboto", sans-serif;
+  }
+
+  .loginForm > a {
+    align-self: center;
+  }
+}
+

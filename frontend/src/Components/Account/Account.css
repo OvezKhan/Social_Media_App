@@ -1,0 +1,162 @@
+.account {
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: 1fr 400px;
+    height: 92vh;
+  }
+  
+  .accountleft {
+    background-image: linear-gradient(to right, #fff5bc, #cec1ff);
+  
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2vmax;
+    box-sizing: border-box;
+    overflow-y: auto;
+  }
+  .accountright {
+    padding: 2vmax;
+    box-sizing: border-box;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .accountright img:hover {
+    transform: scale(1.1);
+  }
+  
+  .accountright img {
+    transition: all 0.5s;
+  }
+  
+  .accountright > h5 {
+    margin: 2vmax;
+  }
+  
+  .accountright > a {
+    color: rgb(73, 73, 73);
+    text-decoration: none;
+    font: 100 1.2rem "Roboto";
+    text-align: center;
+    margin-top: 2vmax;
+    padding: 0.5vmax 1vmax;
+    transition: all 0.5s;
+  }
+  
+  .accountright > a:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.253);
+  }
+  .accountright > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1vmax;
+  }
+  
+  .accountright > div > button:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.253);
+  }
+  .accountright > div > button {
+    border: none;
+    background-color: white;
+    cursor: pointer;
+    transition: all 0.5s;
+    padding: 0.5vmax 1vmax;
+  }
+  
+  @media screen and (max-width: 600px) {
+    .account {
+      grid-template-columns: 2fr 1fr;
+    }
+  
+    .accountleft {
+      padding: 0;
+      min-height: 90vh;
+    }
+  
+    .accountright > a {
+      font: 100 1rem "Roboto";
+      margin-top: 6vw;
+    }
+  }
+
+    
+
+  @media screen and (max-width: 450px) {
+  .account {
+    display: flex;
+    flex-direction: row; /* Keep side by side layout */
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .accountleft {
+    flex: 2;
+    /* overflow-y: auto; */
+    padding: 1vmax;
+    background-color: #fefefe;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1vmax;
+  }
+
+  .accountright {
+    flex: 1;
+    padding: 1vmax;
+    border-left: 1px solid #ddd;
+    overflow-y: auto;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .accountright img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-bottom: 1vmax;
+  }
+
+  .accountright > h5 {
+    font-size: 1rem;
+    margin: 0.5vmax 0;
+    text-align: center;
+  }
+
+  .accountright > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5vmax;
+  }
+
+  .accountright > div > button {
+    font-size: 0.85rem;
+    padding: 0.5vmax 1vmax;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  .accountright > a {
+    font-size: 0.85rem;
+    margin-top: 2vmax;
+    text-align: center;
+    color: #555;
+  }
+
+  .accountleft .post {
+    width: auto;
+    height: auto;
+    object-fit: cover;
+    background-color: #eee;
+    border-radius: 5px;
+    /* padding-right: 2px; */
+  }
+}
