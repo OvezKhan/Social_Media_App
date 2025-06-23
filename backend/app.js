@@ -13,10 +13,8 @@ app.use(express.json({ limit: "50mb" }));
 app.use(express.urlencoded({ limit: "50mb", extended: true }));
 app.use(cookieParser());
 
-const allowedOrigins = [
-  "http://localhost:3000",
-  process.env.FRONTEND_URL
-];
+const allowedOrigins = ["http://localhost:3000",
+   "https://social-media-app-pi-khaki.vercel.app"];
 
 app.use(cors({
   origin: allowedOrigins,
